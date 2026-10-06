@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume / Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="#home" class="logo">MyPortfolio</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#admin-area">Admin</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">Dark</button>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME ============ -->
+    <section id="home" class="section hero">
+      <div class="container">
+        <h1>Hi, I'm <span class="accent">Your Name</span></h1>
+        <p class="tagline">Frontend Developer | Web Enthusiast</p>
+        <a href="#contact" class="btn">Contact Me</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate web developer who loves building clean, responsive and
+          user-friendly websites using HTML, CSS, JavaScript and React. Replace this
+          paragraph with your own short introduction.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="grid">
+          <div class="card">HTML5</div>
+          <div class="card">CSS3</div>
+          <div class="card">JavaScript</div>
+          <div class="card">React</div>
+          <div class="card">Git &amp; GitHub</div>
+          <div class="card">Google Apps Script</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Portfolio Website</h3>
+            <p>Responsive resume site with contact form, admin panel and theme toggle.</p>
+          </article>
+          <article class="card">
+            <h3>React Contact Cards</h3>
+            <p>SPA that adds contact cards dynamically using reusable components.</p>
+          </article>
+          <article class="card">
+            <h3>Like Card</h3>
+            <p>Card component with props and useState like / unlike button.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section id="resume" class="section alt">
+      <div class="container">
+        <h2>Resume</h2>
+        <div class="timeline">
+          <div class="card">
+            <h3>Education</h3>
+            <p>B.E / B.Tech - Your College Name (2021 - 2025)</p>
+          </div>
+          <div class="card">
+            <h3>Experience</h3>
+            <p>Frontend Intern - Company Name (2024)</p>
+          </div>
+          <div class="card">
+            <h3>Certifications</h3>
+            <p>Web Development - Your Course / Platform</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" class="form" novalidate>
+          <label for="c-name">Name</label>
+          <input type="text" id="c-name" name="name" placeholder="Your name" required>
+
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" name="email" placeholder="you@example.com" required>
+
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+          <p id="form-status" class="status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ ADMIN AREA ============ -->
+    <section id="admin-area" class="section alt">
+      <div class="container">
+
+        <!-- Admin login (visible by default) -->
+        <div id="admin-login">
+          <h2>Admin Login</h2>
+          <form id="login-form" class="form" novalidate>
+            <label for="a-user">Username</label>
+            <input type="text" id="a-user" autocomplete="username" required>
+
+            <label for="a-pass">Password</label>
+            <input type="password" id="a-pass" autocomplete="current-password" required>
+
+            <button type="submit" class="btn">Login</button>
+            <p id="login-status" class="status" role="status"></p>
+          </form>
+        </div>
+
+        <!-- User responses (hidden until admin logs in) -->
+        <div id="responses" class="hidden">
+          <div class="resp-head">
+            <h2>User Responses</h2>
+            <div>
+              <button id="refresh-btn" class="btn btn-outline">Refresh</button>
+              <button id="logout-btn" class="btn">Logout</button>
+            </div>
+          </div>
+          <p id="resp-count" class="status"></p>
+          <div id="resp-list" class="resp-list"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
